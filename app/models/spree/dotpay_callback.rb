@@ -50,12 +50,12 @@ module Spree
 
       def pin_code
         payment_method = Spree::PaymentMethod.dotpay_payment_method
-        payment_method.present? ? payment_method.preferences[:dotpay_pin_code] : nil
+        payment_method.present? ? payment_method.preferred_dotpay_pin_code : nil
       end
 
       def dotpay_whitelisted_ip
         payment_method = Spree::PaymentMethod.dotpay_payment_method
-        payment_method.present? ? payment_method.preferences[:dotpay_whitelisted_ip] : nil
+        payment_method.present? ? payment_method.preferred_dotpay_whitelisted_ip : nil
       end
   end
 end

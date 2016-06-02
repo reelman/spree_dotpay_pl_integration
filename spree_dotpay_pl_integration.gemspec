@@ -12,8 +12,12 @@ Gem::Specification.new do |s|
   s.homepage  = 'https://github.com/espresse/spree_dotpay_pl_payment'
   s.license = 'BSD-3'
 
+  s.files        = `git ls-files`.split("\n")
+  s.test_files   = `git ls-files -- spec/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
+
+  s.has_rdoc = false
 
   s.add_dependency 'spree_core', '~> 3.1.0.rc1'
   s.add_dependency 'spree_frontend', '~> 3.1.0.rc1'
