@@ -32,7 +32,7 @@ Configuration
 4. Set up 'Blokuj zewnętrzne urlc', 'HTTPS verify' and 'SSL certificate verify' to true
 5. Click on **ZAPISZ**
 6. Go to **USTAWIENIA** again and then to **KONFIGURACJA SKLEPU**
-7. Set up **WERSJA API** to 'dev'
+7. Set up **WERSJA API** to 'dev' (this gem supports only new Dotpay API)
 8. Click on **ZAPISZ**
 
 **Adding Dotpay payment method to spree store:**
@@ -53,6 +53,7 @@ Configuration
  * Currency code -> 'PLN' (payment currency, has to be the same as currency in your store)
  * Dotpay URL -> 'https://ssl.dotpay.pl/t2/' (Users will be redirectd to this address from your store to make a payment through dotpay webiste)
  * Dotpay whitelisted ip - > '195.150.9.37' (Notifications only from this ip address will be accepted)
+ * Dotpay website language -> 'pl' (language for dotpay payment website, available languages: ["pl", "en", "de", "it", "fr", "es", "cz", "ru", "gb"])
  * Server -> 'live'
  * Test Mode -> set up to 'False'
 7. Click on 'Update' button to save changes
@@ -61,9 +62,6 @@ TODO
 ----
 
 - write automated tests
-- test extension in production environment
-- add support for coupon codes
-- add ability to change payment website language
 
 License
 -------

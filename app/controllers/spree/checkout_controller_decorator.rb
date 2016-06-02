@@ -15,6 +15,7 @@ Spree::CheckoutController.class_eval do
           amount: @order.total.to_f,
           currency: @payment_method.preferences[:currency_code],
           description: "Payment for order: #{@order.number}.",
+          lang: @payment_method.preferences[:dotpay_website_language].downcase,
           url: "#{@payment_method.preferences[:success_url]}?order_number=#{@order.number}",
           charset: "utf-8",
           control: @order.number,

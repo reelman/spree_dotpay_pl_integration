@@ -1,0 +1,3 @@
+pl:
+  spree:
+    invalid_dotpay_language: Nieprawidłowy język strony płatności Dotpay.
