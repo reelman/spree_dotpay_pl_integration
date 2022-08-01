@@ -1,4 +1,4 @@
 Spree::Core::Engine.routes.draw do
-  post 'payments/dotpay/urlc-notification', to: 'dotpay#notification'
-  post 'payments/dotpay/comeback', to: 'dotpay#comeback'
+  match 'payments/dotpay/urlc-notification', to: 'dotpay#notification', via: [:get, :post]
+  match 'payments/dotpay/comeback',          to: 'dotpay#comeback'    , via: [:get, :post]
 end
